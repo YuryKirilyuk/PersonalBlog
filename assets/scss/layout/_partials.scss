@@ -1,0 +1,50 @@
+.section-title {
+  color: $violet;
+  font-size: 3.6rem;
+  font-family: $title-font-family;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+  &:not(h3) {
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    @media screen and (max-width: 768px) {font-size: 4.2rem;}
+    @media screen and (max-width: 480px) {font-size: 3.6rem;}
+  }
+}
+
+.btn-play {
+  align-items: center;
+  background: $red;
+  box-shadow: 0 2px 12px $red;
+  border-radius: 50%;
+  bottom: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 5.4rem;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 0;
+  position: absolute;
+  transition: $default-transition;
+  width: 5.4rem;
+  &:hover {background: darken($red, 10%);}
+  &:before {
+    border-left: 21px solid #fff;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    margin-left: 4px;
+    width: 0;
+  }
+}
+
+#wpadminbar {
+  @media screen and (max-width: 600px) {
+    top: -46px;
+  }
+}

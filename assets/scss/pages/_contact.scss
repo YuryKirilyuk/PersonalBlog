@@ -1,0 +1,67 @@
+.section-contact {
+  background: url(assets/img/bg_contact.png) no-repeat center top;
+  min-height: 586px;
+  padding-top: $headerHeight;
+
+
+  .form-text {
+    color: $violet;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .contact-form {
+    background: #fff;
+    border-radius: 4rem;
+    box-shadow: 0 0 36px #FFF2F5;
+    margin: auto;
+    max-width: 66rem;
+    padding: 5.5rem;
+    text-align: center;
+    width: 100%;
+    @media screen and (max-width: 768px) {padding: 3.5rem;}
+    @media screen and (max-width: 480px) {padding: 3.5rem 2rem;}
+    textarea {
+      height: 15rem;
+      width: 100%;
+    }
+    .btn {
+      border: none;
+      color: #fff;
+      max-width: 18.4rem;
+      @media screen and (max-width: 480px) {max-width: 100%;}
+    }
+  }//.contact-form
+
+  .form-group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+  .form-control {
+    background: rgba($violet, .1);
+    border: none;
+    border-radius: 2.7rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    width: 49%;
+    @include placeholder {
+      color: #4B4B4B;
+      //font-size: 1.6rem;
+    }
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+  }//.form-control
+
+
+}//.section-contact
+
+.contact footer {
+  margin-top: 0;
+}

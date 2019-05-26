@@ -1,0 +1,16 @@
+.btn {
+  background: $red;
+  border-radius: 3rem;
+  box-shadow: 0 12px 36px $red;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  height: 5.4rem;
+  line-height: 5.4rem;
+  margin: 1rem auto;
+  max-width: 36rem;
+  text-align: center;
+  width: 100%;
+  &:hover {background: darken($red, 10%);}
+}
