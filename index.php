@@ -58,7 +58,7 @@ $categories = get_categories();
 
                     endwhile;
 
-                    the_posts_navigation();
+                    //the_posts_navigation();
 
                 else :
 
@@ -66,7 +66,10 @@ $categories = get_categories();
 
                 endif;
                 ?>
-            </div>
+            </div><!-- //.blog-list -->
+
+            <div class="pagination__next"><?php next_posts_link(); ?></div>
+
         </div><!-- //.wrapper -->
 
         <div class="load-more">
@@ -79,6 +82,7 @@ $categories = get_categories();
 
 <script src="<?php bloginfo('stylesheet_directory');?>/assets/js/jquery-3.0.0.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory');?>/assets/js/components/isotope.pkgd.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory');?>/assets/js/components/infinite-scroll.pkgd.min.js"></script>
 
 <script src="<?php bloginfo('stylesheet_directory');?>/assets/js/custom.js" ></script>
 

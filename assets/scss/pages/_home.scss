@@ -245,6 +245,10 @@
         height: 305px;
         margin-bottom: 2rem;
         position: relative;
+        iframe {
+          height: 100%;
+          width: 100%;
+        }
       }
       .socials {
         text-align: right;

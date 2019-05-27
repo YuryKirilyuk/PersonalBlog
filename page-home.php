@@ -66,7 +66,8 @@ get_header();
         </div>
         <div class="video">
             <div class="video-container">
-                <div class="btn-play"></div>
+                <!--div class="btn-play"></div-->
+                <iframe src="https://www.youtube.com/embed/sXPFLawFx-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="socials">
                 <a href="facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>

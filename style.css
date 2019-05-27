@@ -680,6 +680,8 @@ img { height: auto; max-width: 100%; }
 
 .section-about .wrapper .video .video-container { background: #333; box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5); height: 305px; margin-bottom: 2rem; position: relative; }
 
+.section-about .wrapper .video .video-container iframe { height: 100%; width: 100%; }
+
 .section-about .wrapper .video .socials { text-align: right; }
 
 .section-about .wrapper .video .socials a { font-size: 3rem; opacity: .3; display: inline-block; margin: 0 1rem; }
