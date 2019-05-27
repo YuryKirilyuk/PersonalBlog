@@ -13,77 +13,47 @@
  */
 
 get_header();
-
-$categories = get_categories();
-
 ?>
 
-    <section class="section-tags">
-        <div class="wrapper">
-            <ul class="tags-list">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 
-                <li class="tag active"><button data-filter="*">All</button></li>
-                <?php
-                    if( $categories ){
-                        foreach( $categories as $cat ){ ?>
+		<?php
+		if ( have_posts() ) :
 
-                        <li class="tag"><button data-filter=".<?php echo $cat->name; ?>"><?php echo $cat->name; ?></button></li>
+			if ( is_home() && ! is_front_page() ) :
+				?>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				</header>
+				<?php
+			endif;
 
-                <?php   }
-                    }
-                ?>
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
 
+				/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', get_post_type() );
 
-            </ul>
-        </div>
-    </section><!-- //.section-tags -->
+			endwhile;
 
-    <section class="section-blog">
-        <div class="wrapper">
-            <div class="blog-list">
+			the_posts_navigation();
 
-                <?php
-                if ( have_posts() ) :
+		else :
 
-                    /* Start the Loop */
-                    while ( have_posts() ) :
-                        the_post();
+			get_template_part( 'template-parts/content', 'none' );
 
-                        /*
-                         * Include the Post-Type-specific template for the content.
-                         * If you want to override this in a child theme, then include a file
-                         * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                         */
-                        get_template_part( 'template-parts/content', 'blog' );
+		endif;
+		?>
 
-                    endwhile;
-
-                    //the_posts_navigation();
-
-                else :
-
-                    get_template_part( 'template-parts/content', 'none' );
-
-                endif;
-                ?>
-            </div><!-- //.blog-list -->
-
-            <div class="pagination__next"><?php next_posts_link(); ?></div>
-
-        </div><!-- //.wrapper -->
-
-        <div class="load-more">
-            <button class="btn">Load more</button>
-        </div>
-
-    </section><!-- //.section-hero -->
-
-
-
-<script src="<?php bloginfo('stylesheet_directory');?>/assets/js/jquery-3.0.0.min.js"></script>
-<script src="<?php bloginfo('stylesheet_directory');?>/assets/js/components/isotope.pkgd.min.js"></script>
-<script src="<?php bloginfo('stylesheet_directory');?>/assets/js/components/infinite-scroll.pkgd.min.js"></script>
-
-<script src="<?php bloginfo('stylesheet_directory');?>/assets/js/custom.js" ></script>
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php
+get_sidebar();
+get_footer();

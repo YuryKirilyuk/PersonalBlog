@@ -847,7 +847,7 @@ img { height: auto; max-width: 100%; }
 .section-blog .load-more .btn { border: none; height: 7rem; }
 
 /* Rectangle 8 */
-.blog footer { margin-top: 0; }
+.blog footer { margin-top: 0; display: none; }
 
 .single header { background: linear-gradient(12deg, rgba(252, 72, 107, 0.9), rgba(82, 5, 150, 0.9)); }
 

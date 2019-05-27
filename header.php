@@ -32,7 +32,7 @@
 
     <header class="site-header">
         <div class="wrapper">
-            <a class="logo" href="/">
+            <a class="logo" href="<?php echo get_site_url(); ?>">
                 <svg class="">
                     <use xlink:href="<?php bloginfo('stylesheet_directory');?>/assets/img/sprites.svg#logo"></use>
                 </svg>
