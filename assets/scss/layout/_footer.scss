@@ -11,6 +11,9 @@
   position: relative;
   text-align: center;
   width: 100%;
+  @media screen and (max-width: 500px) {
+    margin-top: -11rem;
+  }
 
   .footer-nav {
     margin-bottom: 7.5rem;

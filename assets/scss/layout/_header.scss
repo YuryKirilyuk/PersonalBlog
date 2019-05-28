@@ -7,6 +7,9 @@
   top: 0;
   width: 100%;
   z-index: 99;
+  @media screen and (max-width: 600px) {
+    height: $headerHeightMobile;
+  }
   .wrapper {
     align-items: center;
     display: flex;
@@ -17,6 +20,12 @@
   .logo {
     margin-right: auto;
     width: 10.5rem;
+    @media screen and (max-width: 768px) {
+      width: 8.5rem;
+    }
+    @media screen and (max-width: 600px) {
+      width: 7.5rem;
+    }
     svg {
       height: 6.7rem;
       max-width: 100%;
